@@ -62,6 +62,7 @@ fn algo_read_all_empty() -> Result<(), anyhow::Error> {
 
 #[test]
 fn algo_two_pass() -> Result<(), anyhow::Error> {
+    // fetch-data from https://www.gutenberg.org/files/200/200.txt
     let path = sample_file("200.txt")?;
 
     // count lines in file
@@ -156,7 +157,7 @@ fn algo_two_line() -> Result<(), anyhow::Error> {
     let mut lines = BufReader::new(File::open(&path)?).lines();
     let mut random_line = lines.next().unwrap()?;
     let line = lines.next().unwrap()?;
-    if rng.gen::<f32>() < 0.5 {
+    if rng.gen::<f64>() < 0.5 {
         random_line = line;
     }
     println!("{random_line}");
