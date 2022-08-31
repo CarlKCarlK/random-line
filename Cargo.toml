@@ -1,0 +1,16 @@
+[package]
+name = "random-line"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+fetch-data = "0.1.4"
+cw = { version = "0.7.0" } #, features = ["runtime-dispatch-simd"] 
+rand = "0.8.5"
+rand_xoshiro = "0.6.0"
+thousands = "0.2.0"
+memmap = "0.7.0"
+tailcall = "0.1.6"
+anyhow = "1.0.62"
