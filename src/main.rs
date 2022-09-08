@@ -197,7 +197,7 @@ fn algo_one_pass() -> Result<(), anyhow::Error> {
 
     for (index0, line_result) in lines.enumerate() {
         let line = line_result?; // check each item for an error
-        if rng.gen::<f32>() < 1.0 / (index0 + 1) as f32 {
+        if rng.gen::<f64>() < 1.0 / (index0 + 1) as f64 {
             random_line = Some(line);
         }
     }
